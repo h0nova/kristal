@@ -1,0 +1,75 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "reset";
+@import "global";
+
+.header {
+  &__top {
+    padding: 29px 0;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    color: $gray;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 13px 20px 14px 51px;
+    margin-right: 33px;
+    border-radius: 45px;
+    color: $white;
+    background-color: $brown;
+    border: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 19px;
+      width: 18px;
+      height: 12px;
+      background-image: url("../images/menu.svg");
+      background-size: cover;
+    }
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.logo {
+  width: 119px;
+  height: auto;
+  margin-right: 39px;
+}
+
+.user-nav {
+  position: relative;
+  padding: 13px 20px 14px 51px;
+  margin-left: auto;
+  border-radius: 45px;
+  border: 1px solid $light-gray;
+  color: $gray;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 19px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/user.svg");
+    background-size: cover;
+  }
+}
+
+@import "media";

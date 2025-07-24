@@ -1,0 +1,12 @@
+body {
+  @extend %inter-500;
+  font-size: 14px;
+  line-height: 125%;
+  color: $black;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
