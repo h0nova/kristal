@@ -1,5 +1,6 @@
 # Node.js dependencies
 node_modules/
+package-lock.json
 
 # Gulp build output (if you have a dist or build folder)
 dist/
