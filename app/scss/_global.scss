@@ -1,7 +1,7 @@
 body {
   @extend %inter-500;
 
-  background-color: $bg;
+  background-color: #f8f8f8;
   font-size: 14px;
   line-height: 125%;
   color: $black;
@@ -11,4 +11,10 @@ body {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+
+.title {
+  @extend %playfair-700;
+  font-size: 22px;
+  line-height: 100%;
 }
