@@ -104,16 +104,34 @@
 
   &__title {
     @extend %playfair-700;
+
+    position: relative;
     font-size: 44px;
     line-height: 100%;
     max-width: 305px;
     margin-bottom: 52px;
     color: $black;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: var(--width);
+      height: var(--height);
+      bottom: var(--bottom);
+      left: var(--left);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-image: var(--img);
+      z-index: 10;
+    }
   }
 
   &__text {
     font-size: 16px;
     max-width: 543px;
+    color: $light-gray;
   }
 
   &__img {
