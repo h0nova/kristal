@@ -61,7 +61,7 @@
   padding: 13px 20px 14px 51px;
   margin-left: auto;
   border-radius: 45px;
-  border: 1px solid $gray;
+  border: 1px solid $light-gray;
   color: $dark-gray;
 
   &::before {
@@ -82,6 +82,8 @@
 // start SLIDER
 
 .slider {
+  padding-bottom: 40px;
+
   &__item {
     width: 100%;
     height: 300px;
@@ -131,7 +133,7 @@
   &__text {
     font-size: 16px;
     max-width: 543px;
-    color: $light-gray;
+    color: $gray;
   }
 
   &__img {
@@ -196,7 +198,7 @@
 
   .slick-dots {
     position: absolute;
-    bottom: -35px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -229,5 +231,63 @@
 }
 
 // end SLIDER
+
+// start catalog
+
+.ctlg-menu {
+  border-radius: 16px;
+  background-color: $white;
+  padding: 29px 30px;
+  max-width: 285px;
+
+  &__title {
+    @extend %playfair-700;
+    font-size: 22px;
+    line-height: 100%;
+    margin-bottom: 28px;
+  }
+
+  &__form {
+    position: relative;
+    padding: 16px 8px 40px;
+    background-color: $light-gray;
+    border-radius: 14px;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    color: $text;
+    padding: 0 15px;
+    margin-bottom: 18px;
+  }
+
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+
+  &__input:checked + .ctlg-menu__label,
+  &__label:has(.ctlg-menu__input:checked) {
+    padding: 16px 15px;
+    color: $black;
+    background-color: $white;
+    border-radius: 10px;
+  }
+
+  &__text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 178px;
+    bottom: 23px;
+    color: $gray;
+  }
+}
+
+// end catalog
 
 @import "media";
