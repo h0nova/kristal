@@ -1,0 +1,187 @@
+@media screen and (max-width: 1230px) {
+  // start HEADER
+
+  .header {
+    &-top {
+      font-size: 12px;
+    }
+  }
+
+  // end HEADER
+
+  // start SLIDER
+
+  .container {
+    padding: 0 15px;
+  }
+
+  // end SLIDER
+}
+
+@media screen and (max-width: 1200px) {
+  // start SLIDER
+
+  .slider {
+    &__img {
+      height: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  // start SLIDER
+
+  .slider {
+    &__img {
+      height: 200px;
+    }
+  }
+
+  // end SLIDER
+}
+
+@media screen and (max-width: 970px) {
+  // start HEADER
+
+  .header {
+    &-top {
+      font-size: 10px;
+    }
+
+    .logo {
+      margin-right: 20px;
+    }
+
+    .menu {
+      &__list {
+        gap: 12px;
+      }
+    }
+
+    &__btn {
+      font-size: 0;
+      line-height: 0;
+      border-radius: 50%;
+      padding: 20px;
+      margin-right: 20px;
+
+      &::before {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .user-nav {
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    padding: 11px;
+
+    &::before {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  // end HEADER
+
+  // start SLIDER
+
+  .slider {
+    &__item {
+      height: auto;
+    }
+
+    &__item-inner {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 36px 18px 30px;
+    }
+
+    &__title {
+      max-width: 100%;
+
+      &::after {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &__img {
+      position: relative;
+      transform: translateY(0);
+      margin-bottom: 45px;
+    }
+
+    .slick-track {
+      height: 442px;
+    }
+
+    .slick-arrow {
+      display: none !important;
+    }
+  }
+
+  // end SLIDER
+}
+
+@media screen and (max-width: 630px) {
+  // start HEADER
+
+  .header {
+    &__btn {
+      margin-left: auto;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .user-nav {
+    margin-left: 0;
+  }
+
+  // end HEADER
+
+  // start SLIDER
+
+  .slider {
+    &__title {
+      font-size: 28px;
+
+      &::after {
+        height: 90px;
+        width: 147px;
+        left: 212px;
+      }
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &__img {
+      object-fit: cover;
+    }
+  }
+
+  // end SLIDER
+}
+
+@media screen and (max-width: 460px) {
+  // start SLIDER
+
+  .slider {
+    &__title::after {
+      display: none;
+    }
+
+    &__img {
+      height: 141px;
+    }
+  }
+
+  // end SLIDER
+}

@@ -7,8 +7,6 @@ $(document).on("click", ".catalog__cart-btn", function (event) {
 
 $(".slider").slick({
   slidesToShow: 1,
-  centerMode: true,
-  centerPadding: "120px",
   arrows: true,
   dots: true,
   responsive: [

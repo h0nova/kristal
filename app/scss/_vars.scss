@@ -86,12 +86,13 @@ $tag-new: #f47971;
 
   .slick-dots {
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 12px;
     font-size: 0;
+    line-height: 0;
 
     button {
       position: relative;
