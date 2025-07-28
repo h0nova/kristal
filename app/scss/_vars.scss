@@ -4,16 +4,118 @@ $dark-gray: #3d4249;
 $light-gray: #dbe1ed;
 $gray: #6a6a6a;
 $brown: #a16341;
-$bg: #f8f8f8;
+$bg: #f3f4f5;
 $light-pink: #ffebe0;
 $text: #728299;
+$tag-new: #f47971;
+
+%inter-400 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
 
 %inter-500 {
   font-family: "Inter", sans-serif;
   font-weight: 500;
 }
 
+%inter-600 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+%inter-700 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
 %playfair-700 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
+}
+
+%slider {
+  .slick-slide {
+    padding: 0 15px;
+  }
+
+  .slick-active .slider__item {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: $white;
+    z-index: 10;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      top: 9px;
+      left: 8px;
+    }
+  }
+
+  .slick-prev {
+    left: 40px;
+    &::before {
+      background-image: url("../images/arrow-left.svg");
+    }
+  }
+
+  .slick-next {
+    right: 40px;
+    &::before {
+      background-image: url("../images/arrow-right.svg");
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    font-size: 0;
+
+    button {
+      position: relative;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1.5px solid #c1cad8;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .slick-active button {
+      cursor: default;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #c1cad8;
+      }
+    }
+  }
 }

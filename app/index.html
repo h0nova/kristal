@@ -59,12 +59,8 @@
         </div>
       </div>
     </nav>
-
-
-    </div>
-    </nav>
-
     <ul class="slider">
+
       <li class="slider__item">
         <div class="container">
           <div class="slider__item-inner">
@@ -144,82 +140,560 @@
   </header>
 
   <main class="main">
-    <section class="catalog">
-      <div class="container">
-        <nav class="ctlg-menu">
-          <h2 class="ctlg-menu__title">
+    <div class="container">
+      <div class="main__inner">
+
+        <div class="catalog-slider">
+          <div class="catalog-slider__inner">
+            <button class="catalog-slider__btn">
+              <img src="images/close.svg" alt="закрити" class="catalog-slider__img">
+            </button>
+            <ul class="catalog-slider__list">
+
+            </ul>
+          </div>
+        </div>
+
+        <section class="filter">
+          <h2 class="title">
             Меню
           </h2>
-          <form action="#" class="ctlg-menu__form">
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-1" name="catalog" checked>
+          <form action="#" class="filter__form">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-1" name="catalog" checked>
               Летнее меню
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-2" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-2" name="catalog">
               Кофе и чай
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-3" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-3" name="catalog">
               Комбо
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-4" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-4" name="catalog">
               Shoko Go
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-5" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-5" name="catalog">
               Конструктор завтраков
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-6" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-6" name="catalog">
               Завтраки весь день
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-7" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-7" name="catalog">
               Блинчики
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-8" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-8" name="catalog">
               Пицца от Eazzy Pizza & Gelato
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-9" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-9" name="catalog">
               Супы
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-10" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-10" name="catalog">
               Горячие блюда
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-11" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-11" name="catalog">
               Сэндвичи
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-12" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-12" name="catalog">
               Только в доставке
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-13" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-13" name="catalog">
               Салаты
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-14" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-14" name="catalog">
               Десерты
             </label>
-            <label class="ctlg-menu__label">
-              <input type="radio" class="ctlg-menu__input" id="ctlg-menu-15" name="catalog">
+            <label class="filter__label">
+              <input type="radio" class="filter__input" id="filter-15" name="catalog">
               Добавки и соусы
             </label>
 
-            <span class="ctlg-menu__text">
+            <span class="filter__text">
               Указаны розничные цены
             </span>
           </form>
 
-        </nav>
+        </section>
+        <section class="catalog">
+          <div class="catalog__top">
+            <h2 class="title">
+              Каталог
+            </h2>
+
+            <div class="catalog__dropdown">
+              <button class="catalog__btn">
+                Сначала дешевле
+              </button>
+              <form action="#" class="catalog__form">
+                <label class="catalog__label">
+                  <input type="radio" class="catalog__input" id="filter-1" name="catalog" checked>
+                  Сначала дешевле
+                </label>
+                <label class="catalog__label">
+                  <input type="radio" class="catalog__input" id="filter-2" name="catalog">
+                  Сначала дороже
+                </label>
+                <label class="catalog__label">
+                  <input type="radio" class="catalog__input" id="filter-3" name="catalog">
+                  Сначала новые
+                </label>
+                <label class="catalog__label">
+                  <input type="radio" class="catalog__input" id="filter-4" name="catalog">
+                  Сначала популярные
+                </label>
+              </form>
+            </div>
+          </div>
+
+          <ul class="catalog__list">
+            <li class="catalog__item catalog__item--new" id="catalog__item-1" data-count="3">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item catalog__item--new" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+            <li class="catalog__item" id="catalog__item-1" data-count="4">
+              <a href="#" class="catalog__link">
+                <img src="/images/catalog/item_1/image_1.png" alt="тортик" class="catalog__img">
+                <div class="catalog__wrapper">
+                  <p class="catalog__characteristic">
+                    <span>200</span> гр.
+                  </p>
+                  <p class="catalog__characteristic">
+                    <span>500</span> ккал.
+                  </p>
+                </div>
+                <div class="catalog__wrapper catalog__wrapper--title">
+                  <h3 class="catalog__title">
+                    Тортик
+                  </h3>
+                  <span class="catalog__price">
+                    300
+                  </span>
+                </div>
+                <div class="catalog__text">
+                  Зеркало синхронизует межатомный магнит.
+                </div>
+                <button class="catalog__cart-btn">
+                  В корзину
+                </button>
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
-    </section>
+    </div>
   </main>
   <script src="./js/main.min.js"></script>
 </body>
