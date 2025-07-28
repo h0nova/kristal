@@ -86,7 +86,7 @@ $tag-new: #f47971;
 
   .slick-dots {
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
