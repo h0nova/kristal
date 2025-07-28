@@ -155,7 +155,8 @@
 // start MAIN
 
 .main {
-  margin-top: 23px;
+  margin: 23px 0 45px;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -498,5 +499,34 @@
 }
 
 // end CATALOG
+
+// start FOOTER
+
+.footer {
+  background-color: $black;
+  color: $gray;
+
+  &__inner {
+    display: flex;
+    padding: 29px 0 28px;
+  }
+
+  &__privacy {
+    margin-left: auto;
+
+    &:hover {
+      border-bottom: 1px solid $gray;
+    }
+  }
+
+  &__number {
+    margin-left: 31px;
+    &:hover {
+      border-bottom: 1px solid $gray;
+    }
+  }
+}
+
+// end FOOTER
 
 @import "media";
