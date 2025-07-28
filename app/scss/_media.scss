@@ -26,6 +26,30 @@
       height: 250px;
     }
   }
+
+  // end SLIDER
+
+  // start CATALOG
+
+  .catalog {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+      width: auto;
+    }
+
+    &__wrapper {
+      max-width: calc(100% - 20px);
+    }
+
+    &__text {
+      max-width: calc(100% - 20px);
+    }
+  }
+
+  // end CATALOG
 }
 
 @media screen and (max-width: 1070px) {
@@ -126,6 +150,85 @@
   // end SLIDER
 }
 
+@media screen and (max-width: 900px) {
+  // start FILTER
+
+  .filter {
+    display: none;
+
+    &--active {
+      display: block;
+      position: fixed;
+      max-width: 100vw;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-color: rgba($color: #000, $alpha: 0.3);
+      border-radius: 0;
+      z-index: 50;
+    }
+
+    &__inner {
+      margin: calc((100vh - 624px) / 2) auto;
+      max-width: 400px;
+    }
+
+    &__form {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 11px 9px;
+    }
+
+    &__label {
+      padding: 16px 15px;
+    }
+
+    &__text {
+      display: none;
+    }
+  }
+
+  // end FILTER
+
+  // start CATALOG
+
+  .catalog {
+    &__top {
+      flex-direction: column;
+      align-items: start;
+      padding: 0 18px;
+    }
+
+    .title {
+      width: 100%;
+      border-bottom: 1px solid $text;
+      padding-bottom: 24px;
+    }
+
+    &__filters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    &__options {
+      display: block;
+    }
+
+    &__wrapper {
+      max-width: calc(100% - 40px);
+    }
+
+    &__text {
+      max-width: calc(100% - 40px);
+    }
+  }
+
+  // end CATALOG
+}
+
 @media screen and (max-width: 630px) {
   // start HEADER
 
@@ -168,6 +271,16 @@
   }
 
   // end SLIDER
+
+  // start CATALOG
+
+  .catalog {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // end CATALOG
 }
 
 @media screen and (max-width: 460px) {
@@ -184,4 +297,22 @@
   }
 
   // end SLIDER
+
+  // start CATALOG
+
+  .catalog {
+    &__list {
+      font-size: 10px;
+    }
+
+    &__wrapper {
+      max-width: calc(100% - 20px);
+    }
+
+    &__text {
+      max-width: calc(100% - 20px);
+    }
+  }
+
+  // end CATALOG
 }

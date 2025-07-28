@@ -61,3 +61,7 @@ $(".catalog__item, .catalog-slider__btn").on("click", function () {
 
   $(".catalog-slider").toggleClass("catalog-slider--active");
 });
+
+$(".catalog__options").on("click", function () {
+  $(".filter").toggleClass("filter--active");
+});
