@@ -28,16 +28,22 @@
     background-color: $brown;
     border: none;
 
-    &::before {
-      content: "";
+    &--line {
       position: absolute;
+      width: 18px;
+      height: 2px;
       top: 50%;
       transform: translateY(-50%);
       left: 19px;
-      width: 18px;
-      height: 12px;
-      background-image: url("../images/menu.svg");
-      background-size: cover;
+      background-color: #fff;
+
+      &:nth-child(1) {
+        transform: translateY(calc(-50% - 5px));
+      }
+
+      &:nth-child(3) {
+        transform: translateY(calc(-50% + 5px));
+      }
     }
   }
 }
