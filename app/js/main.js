@@ -9,20 +9,6 @@ $(".slider").slick({
   slidesToShow: 1,
   arrows: true,
   dots: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        centerPadding: "40px",
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        centerPadding: "20px",
-      },
-    },
-  ],
 });
 
 $(".catalog__btn").on("click", function () {
@@ -62,6 +48,10 @@ $(".catalog__item, .catalog-slider__btn").on("click", function () {
   $(".catalog-slider").toggleClass("catalog-slider--active");
 });
 
-$(".catalog__options").on("click", function () {
+$(".catalog__options, .filter__btn").on("click", function () {
   $(".filter").toggleClass("filter--active");
+});
+
+$(".header__dropdown, .header__close").on("click", function () {
+  $(".menu__list").toggleClass("menu__list--active");
 });

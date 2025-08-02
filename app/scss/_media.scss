@@ -62,6 +62,18 @@
   }
 
   // end SLIDER
+
+  // start CATALOG-SLIDER
+
+  .catalog-slider {
+    padding: 15px;
+
+    &__inner {
+      width: auto;
+    }
+  }
+
+  // end CATALOG-SLIDER
 }
 
 @media screen and (max-width: 970px) {
@@ -79,31 +91,6 @@
     .menu {
       &__list {
         gap: 12px;
-      }
-    }
-
-    &__btn {
-      font-size: 0;
-      line-height: 0;
-      border-radius: 50%;
-      padding: 20px;
-      margin-right: 20px;
-      border: 1px solid $brown;
-      border-radius: 50%;
-      background-color: $light-brown;
-
-      &--line {
-        background-color: $brown;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        &:nth-child(1) {
-          transform: translate(-50%, calc(-50% - 5px));
-        }
-
-        &:nth-child(3) {
-          transform: translate(-50%, calc(-50% + 5px));
-        }
       }
     }
   }
@@ -153,10 +140,9 @@
     .slick-track {
       height: 442px;
     }
-
-    .slick-arrow {
-      display: none !important;
-    }
+  }
+  .slick-arrow {
+    display: none !important;
   }
 
   // end SLIDER
@@ -181,9 +167,19 @@
       z-index: 50;
     }
 
+    &__top {
+      margin-bottom: 15px;
+      padding: 0 27px;
+    }
+
+    &__btn {
+      display: block;
+    }
+
     &__inner {
       margin: calc((100vh - 624px) / 2) auto;
       max-width: 400px;
+      padding: 22px 9px;
     }
 
     &__form {
@@ -205,6 +201,9 @@
   // start CATALOG
 
   .catalog {
+    background-color: transparent;
+    padding: 0;
+
     &__top {
       flex-direction: column;
       align-items: start;
@@ -239,19 +238,62 @@
   }
 
   // end CATALOG
+
+  // start FOOTER
+
+  .footer {
+    &__inner {
+      justify-content: center;
+    }
+
+    &__links {
+      justify-content: center;
+    }
+  }
+
+  // end FOOTER
 }
 
 @media screen and (max-width: 630px) {
+  .container {
+    padding: 0 10px;
+  }
+
   // start HEADER
 
   .header {
     &__btn {
-      margin-left: auto;
+      margin-right: 0;
+    }
+
+    &__dropdown {
+      display: block;
     }
   }
 
   .menu {
-    display: none;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+    &__list {
+      display: none;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: space-between;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background-color: rgba($color: #000, $alpha: 0.4);
+      padding: 150px 0;
+      color: $white;
+      z-index: 20;
+
+      &--active {
+        display: flex;
+      }
+    }
   }
 
   .user-nav {
@@ -260,9 +302,15 @@
 
   // end HEADER
 
+  .main {
+    margin-top: 10px;
+  }
+
   // start SLIDER
 
   .slider {
+    padding-bottom: 30px;
+
     &__title {
       font-size: 28px;
 
@@ -280,6 +328,10 @@
     &__img {
       object-fit: cover;
     }
+
+    .slick-slide {
+      padding: 0;
+    }
   }
 
   // end SLIDER
@@ -290,6 +342,16 @@
     &__list {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    &__cart-btn {
+      font-size: 0;
+      line-height: 0;
+
+      &::before {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 
   // end CATALOG
@@ -299,6 +361,7 @@
   // start SLIDER
 
   .slider {
+    padding: 0;
     &__title::after {
       display: none;
     }
@@ -313,18 +376,48 @@
   // start CATALOG
 
   .catalog {
-    &__list {
-      font-size: 10px;
+    &__item {
+      &--new::before {
+        font-size: 7px;
+        width: 23px;
+        height: 23px;
+        padding: 3px;
+      }
     }
 
     &__wrapper {
-      max-width: calc(100% - 20px);
+      font-size: 10px;
+      max-width: calc(100% - 14px);
+
+      &--title {
+        font-size: 14px;
+      }
     }
 
     &__text {
-      max-width: calc(100% - 20px);
+      font-size: 10px;
+      line-height: 125%;
+      max-width: calc(100% - 14px);
+    }
+
+    &__filters {
+      font-size: 12px;
     }
   }
 
   // end CATALOG
+}
+
+@media screen and (max-width: 420px) {
+  .slider {
+    height: 415px;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .footer {
+    &__links {
+      gap: 11px;
+    }
+  }
 }
