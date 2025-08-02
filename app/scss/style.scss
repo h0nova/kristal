@@ -28,21 +28,92 @@
     background-color: $brown;
     border: none;
 
-    &::before {
-      content: "";
+    &--line {
       position: absolute;
+      width: 18px;
+      height: 2px;
       top: 50%;
       transform: translateY(-50%);
       left: 19px;
+      background-color: #fff;
+
+      &:nth-child(1) {
+        transform: translateY(calc(-50% - 5px));
+      }
+
+      &:nth-child(3) {
+        transform: translateY(calc(-50% + 5px));
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 50%;
+    padding: 20px;
+    border: 1px solid $brown;
+    border-radius: 50%;
+    background-color: $light-brown;
+    cursor: pointer;
+
+    &--line {
+      position: absolute;
+      background-color: $brown;
       width: 18px;
-      height: 12px;
-      background-image: url("../images/menu.svg");
-      background-size: cover;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $brown;
+
+      &:nth-child(1) {
+        transform: translate(-50%, calc(-50% - 5px));
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, calc(-50% + 5px));
+      }
+    }
+  }
+
+  &__close {
+    //    display: none;
+    position: absolute;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    top: 100px;
+    right: 50px;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 19px;
+      height: 2px;
+      background-color: $black;
+    }
+
+    span:first-child {
+      transform: rotate(45deg);
+    }
+
+    span:last-child {
+      transform: rotate(-45deg);
     }
   }
 }
 
 .menu {
+  position: relative;
   &__list {
     display: flex;
     align-items: center;
@@ -173,16 +244,53 @@
 // start FILTER
 
 .filter {
-  border-radius: 16px;
-  background-color: $white;
-  padding: 29px 30px;
-  max-width: 285px;
+  &__inner {
+    border-radius: 16px;
+    background-color: $white;
+    padding: 29px 30px;
+    max-width: 285px;
+  }
 
-  .title {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 28px;
   }
 
+  &__btn {
+    display: none;
+    position: relative;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 19px;
+      height: 2px;
+      background-color: $black;
+    }
+
+    span:first-child {
+      transform: rotate(45deg);
+    }
+
+    span:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+
   &__form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     position: relative;
     padding: 16px 8px 40px;
     background-color: $bg;
@@ -269,7 +377,7 @@
     height: 624px;
     background-color: $white;
     border-radius: 10px;
-    margin: calc((100vh - 624px) / 2) auto;
+    margin: calc((100vh - 639px) / 2) auto;
   }
 
   &-slider__list {
@@ -283,7 +391,7 @@
 
     .slick-arrow {
       top: auto;
-      bottom: 8px;
+      bottom: 3px;
     }
 
     .slick-prev {
@@ -380,6 +488,30 @@
     color: $black;
   }
 
+  &__options {
+    display: none;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: $gray;
+    cursor: pointer;
+    padding-left: 32px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../images/options.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -394,6 +526,7 @@
     width: 200px;
     padding: 17px 0 16px;
     overflow: hidden;
+    margin: 0 auto;
 
     &:hover {
       .catalog__cart-btn {
@@ -512,25 +645,28 @@
 
   &__inner {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
     padding: 29px 0 28px;
+    gap: 11px;
   }
 
-  &__privacy {
-    margin-left: auto;
-
-    &:hover {
-      border-bottom: 1px solid $gray;
-    }
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 31px;
   }
 
+  &__privacy,
   &__number {
-    margin-left: 31px;
+    transition: border-bottom 0.1s ease;
+    border-bottom: 1px solid transparent;
+
     &:hover {
-      border-bottom: 1px solid $gray;
+      border-bottom-color: $gray;
     }
   }
 }
-
 // end FOOTER
 
 @import "media";
