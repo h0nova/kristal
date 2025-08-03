@@ -55,3 +55,24 @@ $(".catalog__options, .filter__btn").on("click", function () {
 $(".header__dropdown, .header__close").on("click", function () {
   $(".menu__list").toggleClass("menu__list--active");
 });
+
+$(".form-code__input").on("input", function () {
+  const $this = $(this);
+  const val = $this.val();
+
+  if (val.length > 1) {
+    $this.val(val.charAt(0));
+  }
+
+  if (val && $this.next("input").length) {
+    $this.next("input").focus();
+  }
+});
+
+$(".form-code__input").on("keydown", function (e) {
+  const $this = $(this);
+
+  if (e.key === "Backspace" && !$this.val() && $this.prev("input").length) {
+    $this.prev("input").focus();
+  }
+});

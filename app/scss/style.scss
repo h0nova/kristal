@@ -669,7 +669,7 @@
 }
 // end FOOTER
 
-// start LOGIN PAGE
+// start LOGIN PAGES
 
 .auth {
   color: $text;
@@ -694,16 +694,23 @@
   }
 
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
     position: relative;
     margin: 0 auto;
     max-width: 420px;
+    padding: 15px 0;
     width: 100%;
     height: 50px;
     border-radius: 56px;
     border: none;
     color: $white;
     font-size: 16px;
+    text-align: center;
     transition: opacity 0.2s;
+    margin-bottom: 16px;
     cursor: pointer;
 
     &:hover {
@@ -712,36 +719,28 @@
 
     &::before {
       content: "";
-      position: absolute;
+      display: block;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      transform: translateY(-50%);
-      top: 50%;
     }
 
     &--vk {
       background-color: $blue;
-      padding-left: 43px;
-      margin-bottom: 16px;
 
       &::before {
         width: 26px;
         height: 14px;
-        left: 127px;
         background-image: url("../images/vk.svg");
       }
     }
 
     &--google {
       background-color: $red;
-      padding-left: 38px;
-      margin-bottom: 36px;
 
       &::before {
         width: 21px;
         height: 21px;
-        left: 105px;
         background-image: url("../images/google.svg");
       }
     }
@@ -756,16 +755,9 @@
       &:hover {
         background-color: $light-gray;
       }
-
-      &::before {
-        left: 104px;
-      }
     }
 
     &--mail {
-      padding-left: 38px;
-      margin-bottom: 17px;
-
       &::before {
         width: 21px;
         height: 17px;
@@ -774,21 +766,24 @@
     }
 
     &--number {
-      padding-left: 41px;
-      margin-bottom: 35px;
-
       &::before {
         width: 24px;
         height: 24px;
         background-image: url("../images/number.svg");
       }
     }
+
+    &--submit {
+      background-color: $brown;
+      text-align: center;
+      margin-top: 27px;
+    }
   }
 
   &__line {
     display: flex;
     align-items: center;
-    margin-bottom: 36px;
+    margin: 36px 0;
 
     &::before,
     &::after {
@@ -814,15 +809,83 @@
         transparent 22px 33px
       );
     }
+
+    span {
+      padding: 0 17px;
+      background-color: $white;
+    }
   }
 
   &__text {
     @extend %inter-400;
     font-size: 12px;
     max-width: 345px;
-    margin: 0 auto;
+    margin: 35px auto 0;
+  }
+
+  &__form {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    border-radius: 56px;
+    border: 1px solid $text;
+    font-size: 16px;
+    padding: 16px 27px;
+
+    & + & {
+      margin-top: 18px;
+    }
+  }
+
+  &__input--tel {
+    &:not(:placeholder-shown) + .auth__btn--tel {
+      display: block;
+    }
+  }
+
+  &__btn--tel {
+    display: none;
+    position: absolute;
+    width: 144px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background-color: $brown;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 36px;
   }
 }
-// end LOGIN PAGE
+
+.form-code {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__input {
+    @extend %inter-400;
+
+    font-size: 30px;
+    width: 55px;
+    height: 56px;
+    border: none;
+    border-bottom: 1px solid $text;
+    text-align: center;
+    margin-top: 43px;
+    color: $text;
+
+    &:focus {
+      outline: transparent;
+      border-bottom-color: $gray;
+    }
+  }
+}
+// end LOGIN PAGES
 
 @import "media";
