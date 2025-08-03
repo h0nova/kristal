@@ -80,7 +80,7 @@
   }
 
   &__close {
-    //    display: none;
+    display: none;
     position: absolute;
     padding: 0;
     font-size: 0;
@@ -668,5 +668,161 @@
   }
 }
 // end FOOTER
+
+// start LOGIN PAGE
+
+.auth {
+  color: $text;
+  max-width: 507px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 43px 35px;
+  background-color: $white;
+  border-radius: 16px;
+  text-align: center;
+
+  .title {
+    font-size: 30px;
+    color: $black;
+    margin-bottom: 17px;
+  }
+
+  &__subtitle {
+    @extend %inter-400;
+    max-width: 405px;
+    margin: 0 auto 35px;
+  }
+
+  &__btn {
+    position: relative;
+    margin: 0 auto;
+    max-width: 420px;
+    width: 100%;
+    height: 50px;
+    border-radius: 56px;
+    border: none;
+    color: $white;
+    font-size: 16px;
+    transition: opacity 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+
+    &--vk {
+      background-color: $blue;
+      padding-left: 43px;
+      margin-bottom: 16px;
+
+      &::before {
+        width: 26px;
+        height: 14px;
+        left: 127px;
+        background-image: url("../images/vk.svg");
+      }
+    }
+
+    &--google {
+      background-color: $red;
+      padding-left: 38px;
+      margin-bottom: 36px;
+
+      &::before {
+        width: 21px;
+        height: 21px;
+        left: 105px;
+        background-image: url("../images/google.svg");
+      }
+    }
+
+    &--mail,
+    &--number {
+      background-color: $white;
+      color: $text;
+      border: 1px solid $text;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+
+      &::before {
+        left: 104px;
+      }
+    }
+
+    &--mail {
+      padding-left: 38px;
+      margin-bottom: 17px;
+
+      &::before {
+        width: 21px;
+        height: 17px;
+        background-image: url("../images/mail.svg");
+      }
+    }
+
+    &--number {
+      padding-left: 41px;
+      margin-bottom: 35px;
+
+      &::before {
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/number.svg");
+      }
+    }
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+    }
+
+    &::before {
+      left: 0;
+      background-image: repeating-linear-gradient(
+        to right,
+        $text 0 11px,
+        transparent 11px 22px
+      );
+    }
+
+    &::after {
+      right: 0;
+      background-image: repeating-linear-gradient(
+        to right,
+        $text 11px 22px,
+        transparent 22px 33px
+      );
+    }
+  }
+
+  &__text {
+    @extend %inter-400;
+    font-size: 12px;
+    max-width: 345px;
+    margin: 0 auto;
+  }
+}
+// end LOGIN PAGE
 
 @import "media";
