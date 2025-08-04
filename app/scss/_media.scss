@@ -146,6 +146,88 @@
   }
 
   // end SLIDER
+
+  // start SALES
+
+  .sales {
+    flex-direction: column;
+    margin-bottom: 52px;
+
+    &__inner {
+      padding: 26px 24px 43px;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+
+    &__link {
+      font-size: 14px;
+      padding: 14px 69px;
+      width: 319px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__link {
+      margin: 0 auto;
+    }
+
+    &__list {
+      height: 255px;
+      max-width: 100%;
+    }
+  }
+
+  .condition {
+    margin-bottom: 52px;
+    padding: 0 18px;
+
+    .title {
+      font-size: 28px;
+    }
+
+    &__text {
+      font-size: 14px;
+
+      p + p {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  .contact {
+    .title {
+      font-size: 28px;
+      margin-bottom: 30px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__form {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__input {
+      max-width: 100%;
+
+      & + & {
+        margin-top: 10px;
+      }
+    }
+
+    &__btn {
+      margin-top: 26px;
+      max-width: 100%;
+    }
+  }
+
+  // end SALES
 }
 
 @media screen and (max-width: 900px) {
