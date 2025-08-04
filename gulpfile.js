@@ -7,6 +7,26 @@ const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 const browserSync = require("browser-sync").create();
+const nunjucksRender = require("gulp-nunjucks-render");
+const htmlbeautify = require("gulp-html-beautify");
+
+function nunjucks() {
+  return src("app/pages/**/*.njk")
+    .pipe(
+      nunjucksRender({
+        path: ["app/components/", "app/pages/", "app/partials/"],
+      })
+    )
+    .pipe(
+      htmlbeautify({
+        indent_size: 2,
+        preserve_newlines: true,
+        max_preserve_newlines: 1,
+      })
+    )
+    .pipe(dest("app/"))
+    .pipe(browserSync.stream());
+}
 
 function browsersync() {
   browserSync.init({
@@ -76,15 +96,19 @@ function cleanDist() {
 function watching() {
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
+  watch(
+    ["app/pages/**/*.njk", "app/components/**/*.njk", "app/partials/**/*.njk"],
+    nunjucks
+  );
   watch(["app/**/*.html"]).on("change", browserSync.reload);
 }
 
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
+exports.nunjucks = nunjucks;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
-
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, nunjucks, browsersync, watching);

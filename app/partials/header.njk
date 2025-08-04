@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Восстановление пароля</title>
+  <title>{{ title }}</title>
 </head>
 
 <body>
@@ -67,6 +69,8 @@
             </ul>
           </nav>
 
+
+
           <a href="login.html" class="user-nav">
             Личный кабинет
           </a>
@@ -77,53 +81,3 @@
 
   <main class="main">
     <div class="container">
-
-      <section class="auth">
-        <h1 class="title">
-          Восстановление пароля
-        </h1>
-
-        <form action="#" class="auth__form">
-          <input type="email" class="auth__input auth__input--tel" placeholder="Номер телефона">
-          <button type="submit" class="auth__btn auth__btn--tel">
-            Отправить код
-          </button>
-        </form>
-
-        <form action="#" class="form-code">
-          <input type="text" class="form-code__input" maxlength="1">
-          <input type="text" class="form-code__input" maxlength="1">
-          <input type="text" class="form-code__input" maxlength="1">
-          <input type="text" class="form-code__input" maxlength="1">
-          <input type="text" class="form-code__input" maxlength="1">
-        </form>
-
-        <a href="login.html" class="auth__link">
-          Авторизация
-        </a>
-      </section>
-
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <p class="footer__copy">
-          © Кондитерские изделия«Кристалл», 2000–2023
-        </p>
-        <div class="footer__links">
-          <a href="#" class="footer__privacy">
-            Политика конфиденциальности
-          </a>
-          <a href="tel:+78412709900" class="footer__number">
-            +7 (8412) 709-900
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="./js/main.min.js"></script>
-</body>
-
-</html>

@@ -22,3 +22,13 @@ body {
   font-size: 22px;
   line-height: 100%;
 }
+
+.main {
+  margin: 23px 0 45px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+  }
+}

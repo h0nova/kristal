@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Главная страница</title>
+  <title>Авторизация</title>
 </head>
 
 <body>
@@ -19,7 +17,7 @@
       <div class="container">
         <div class="header-top__inner">
 
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img src="images/logo.png" alt="логотип" class="logo__img">
           </a>
 
@@ -37,7 +35,7 @@
                 Каталог
               </button>
               <li class="menu__item">
-                <a href="#" class="menu__link">
+                <a href="sales.html" class="menu__link">
                   Оптовые продажи
                 </a>
               </li>
@@ -69,58 +67,53 @@
             </ul>
           </nav>
 
-
-
           <a href="login.html" class="user-nav">
             Личный кабинет
           </a>
         </div>
       </div>
     </nav>
-
   </header>
 
   <main class="main">
     <div class="container">
-      <div class="main__inner">
 
-        <section class="auth">
-          <h1 class="title">
-            Авторизация
-          </h1>
+      <section class="auth">
+        <h1 class="title">
+          Авторизация
+        </h1>
 
-          <form action="#" class="auth__form">
-            <input type="tel" class="auth__input auth__input--tel" placeholder="Номер телефона">
-            <button type="submit" class="auth__btn auth__btn--tel">
-              Отправить код
-            </button>
-          </form>
+        <form action="#" class="auth__form">
+          <input type="tel" class="auth__input auth__input--tel" placeholder="Номер телефона">
+          <button type="submit" class="auth__btn auth__btn--tel">
+            Отправить код
+          </button>
+        </form>
 
-          <form action="#" class="form-code">
-            <input type="text" class="form-code__input" maxlength="1">
-            <input type="text" class="form-code__input" maxlength="1">
-            <input type="text" class="form-code__input" maxlength="1">
-            <input type="text" class="form-code__input" maxlength="1">
-            <input type="text" class="form-code__input" maxlength="1">
-          </form>
+        <form action="#" class="form-code">
+          <input type="text" class="form-code__input" maxlength="1">
+          <input type="text" class="form-code__input" maxlength="1">
+          <input type="text" class="form-code__input" maxlength="1">
+          <input type="text" class="form-code__input" maxlength="1">
+          <input type="text" class="form-code__input" maxlength="1">
+        </form>
 
-          <p class="auth__text">
-            Нажимая на кнопки “Продолжить”, вы соглашаетесь с политикой конфиденциальности
-          </p>
-          <div class="auth__line">
-            <span>Или</span>
-          </div>
-          <a href="#" class="auth__btn auth__btn--vk">
-            Продолжить с VK
+        <p class="auth__text">
+          Нажимая на кнопки “Продолжить”, вы соглашаетесь с политикой конфиденциальности
+        </p>
+        <div class="auth__line">
+          <span>Или</span>
+        </div>
+        <a href="#" class="auth__btn auth__btn--vk">
+          Продолжить с VK
+        </a>
+        <a href="#" class="auth__btn auth__btn--google">
+          Продолжить с Google
+          <a href="login-mail.html" class="auth__btn auth__btn--mail">
+            Продолжить с почтой
           </a>
-          <a href="#" class="auth__btn auth__btn--google">
-            Продолжить с Google
-            <a href="login-mail.html" class="auth__btn auth__btn--mail">
-              Продолжить с почтой
-            </a>
-        </section>
+      </section>
 
-      </div>
     </div>
   </main>
 

@@ -1,0 +1,142 @@
+.header {
+  &-top {
+    background-color: $white;
+    padding: 29px 0;
+    margin-bottom: 27px;
+  }
+
+  &-top__inner {
+    display: flex;
+    align-items: center;
+    color: $dark-gray;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 13px 20px 14px 51px;
+    margin-right: 33px;
+    border-radius: 45px;
+    color: $white;
+    background-color: $brown;
+    border: none;
+    cursor: pointer;
+
+    &--line {
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 19px;
+      background-color: #fff;
+
+      &:nth-child(1) {
+        transform: translateY(calc(-50% - 5px));
+      }
+
+      &:nth-child(3) {
+        transform: translateY(calc(-50% + 5px));
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 50%;
+    padding: 20px;
+    border: 1px solid $brown;
+    border-radius: 50%;
+    background-color: $light-brown;
+    cursor: pointer;
+
+    &--line {
+      position: absolute;
+      background-color: $brown;
+      width: 18px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $brown;
+
+      &:nth-child(1) {
+        transform: translate(-50%, calc(-50% - 5px));
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, calc(-50% + 5px));
+      }
+    }
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    top: 100px;
+    right: 50px;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 19px;
+      height: 2px;
+      background-color: $black;
+    }
+
+    span:first-child {
+      transform: rotate(45deg);
+    }
+
+    span:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.logo {
+  width: 119px;
+  height: auto;
+  margin-right: 39px;
+}
+
+.user-nav {
+  position: relative;
+  padding: 13px 20px 14px 51px;
+  margin-left: auto;
+  border-radius: 45px;
+  border: 1px solid $light-gray;
+  color: $dark-gray;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 19px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/user.svg");
+    background-size: cover;
+  }
+}
