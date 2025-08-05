@@ -1,0 +1,27 @@
+.suppliers {
+  background-color: $white;
+  padding: 31px 0;
+  margin-bottom: 78px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title {
+    color: $gray;
+  }
+
+  &__list {
+    display: flex;
+    gap: 57px;
+  }
+
+  &__item {
+    display: none;
+
+    &:nth-child(-n + 5) {
+      display: inline-block;
+    }
+  }
+}
